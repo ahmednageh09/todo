@@ -1,0 +1,128 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 500px;
+  margin: 20px auto;
+}
+
+.form {
+  background-color: #eee;
+  border-radius: 6px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  flex: 1;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.add {
+  border: none;
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.tasks {
+  background-color: #eee;
+  margin-top: 20px;
+  border-radius: 6px;
+  padding: 10px;
+  position: relative;
+}
+
+.tasks .task {
+  background-color: white;
+  padding: 5px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.tasks .task:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.tasks .task:hover {
+  background-color: #f7f7f7;
+}
+
+.tasks .task.done :not(.task-checkbox):not(.del) {
+  opacity: 0.2;
+}
+
+.tasks .task-title {
+  flex: 1;
+}
+
+.tasks .task span {
+  font-weight: bold;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 10px;
+  background-color: red;  
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tasks .task .del {
+    background-color: #e91e63;
+}
+
+.task-stats {
+  position: absolute;
+  overflow: hidden;
+  margin: 10px auto;
+  width: 300px;
+  font-size: 12px;
+}
+
+.task-stats .tasks-count,
+.task-stats .tasks-completed {
+  width: 50%;
+  float: left;
+  padding: 5px;
+}
+
+.task-stats .tasks-count span,
+.task-stats .tasks-completed span {
+  color: #fff;
+  padding: 1px 5px;
+  font-size: 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.task-stats .tasks-count span {
+  background-color: #e91e63;
+}
+
+.task-stats .tasks-completed span {
+  background-color: #03a9f4;
+}
+
+.no-tasks-message {
+  display: block;
+  text-align: center;
+  padding: 2px;
+  font-weight: bold;
+  color: #888;
+}
